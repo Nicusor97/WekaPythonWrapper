@@ -59,10 +59,14 @@ class StarPlot(VisWidget):
 
     @property
     def bgColor(self):
+        """Get the background color.
+        """
         return self.__bgColor
 
     @bgColor.setter
     def bgColor(self, color):
+        """Set the bg color.
+        """
         self.__bgColor = color
         self.scene().setBackgroundBrush(self.__bgColor)
 
@@ -104,6 +108,8 @@ class StarPlot(VisWidget):
         self.setUpdatesEnabled(False)
 
     def addAxes(self):
+        """Add a new axis to the graph.
+        """
         numDims = len(self.relation.fieldNames) - 1
         angle = 360 / numDims
         axisDomains = self.relation.axisDomains
@@ -123,6 +129,8 @@ class StarPlot(VisWidget):
             text.setParentItem(axis)
 
     def addPoints(self):
+        """Add a number of points to the graph.
+        """
         numDims = len(self.relation.fieldNames) - 1
         datasets = self.relation.getScaledDatasets()
         for ds in datasets:
@@ -185,6 +193,8 @@ class StarPlot(VisWidget):
         self.setUpdatesEnabled(True)
 
     def selectData(self, rubberBandRect, fromScenePoint, toScenePoint):
+        """Use the coordinates to color the selected part of the graph. 
+        """
         if fromScenePoint == toScenePoint:
             return
 

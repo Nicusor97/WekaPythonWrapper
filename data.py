@@ -1,11 +1,17 @@
 
 from PyQt5.QtCore import QObject, pyqtSignal
 import re
+import os
 
+BP = os.path.dirname(os.path.abspath(__file__))
 
 class RelationFactory(object):
     @staticmethod
     def loadFromFile(fileName):
+        """Load information about a dataset from a file and return a object which have all the necessary properties to generate the predictions.
+
+           :param fileName: The dataset file name.
+        """
         rel = Relation()
 
         with open(fileName, "r") as f:

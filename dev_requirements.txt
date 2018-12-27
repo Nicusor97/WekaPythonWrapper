@@ -1,0 +1,4 @@
+PyQt5
+six>=1.11.0
+python-dateutil>=2.6.1
+pytest
