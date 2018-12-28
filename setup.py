@@ -4,6 +4,8 @@ import os
 
 from setuptools import setup, find_packages
 
+import QtWekaWrapper
+
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 
@@ -22,7 +24,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(name='QtWekaWrapper',
-    version='1.0',
+    version=QtWekaWrapper.__version__,
     description='A Python wrapper for the Weka graphics .',
     author='Picatureanu Nicusor',
     author_email='nicolaepicatureanu@gmail.com',

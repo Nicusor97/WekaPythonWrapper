@@ -22,8 +22,10 @@ You can find the module on the [PyPi](https://pypi.org/project/QtWekaWrapper/).
 Usage
 -----
 
-Create a Python 3 environment with the 'virtualenv' module and after activate it. After install the requirements using the pip module : `pip install dev_requirements.txt` and run the `main.py` script from command line.
+Create a Python 3 environment with the 'virtualenv' module and after activate it. Install the module with `pip install QtWekaWrapper` command and you can instantiate the qt window where the arff file will be loaded:
 
+    from QtWekaWrapper import qtwekawrapper
+    window = qtwekawrapper.run_qt_window()
 
 Development
 -----------
