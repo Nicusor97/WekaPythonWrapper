@@ -4,9 +4,8 @@ import os
 
 from setuptools import setup, find_packages
 
-# import QtWrapperWeka
-
 CURRENT_DIR = os.path.abspath(os.path.dirname(__file__))
+
 
 def get_reqs(*fns):
     lst = []
@@ -18,24 +17,29 @@ def get_reqs(*fns):
             lst.append(package.strip())
     return lst
 
-setup(name='QtWrapperWeka',
-    version=(0,0,1),
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setup(name='QtWekaWrapper',
+    version='1.0',
     description='A Python wrapper for the Weka graphics .',
     author='Picatureanu Nicusor',
     author_email='nicolaepicatureanu@gmail.com',
     url='https://github.com/Nicusor97/WekaPythonWrapper',
-    license='LGPL License',
+    license='MIT License',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     packages=find_packages(),
     package_data={
         'QtWekaWrapper': [
             'fixtures/*'
         ],
     },
-
     classifiers=[
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
-        "Operating System :: Linux(Ubuntu)",
+        "Operating System :: Linux",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Text Processing :: General",
     ],
