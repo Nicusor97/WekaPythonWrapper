@@ -15,7 +15,9 @@ First install the Weka and LibSVM Java libraries. On Debian/Ubuntu this is simpl
 
 Then install the Python package with pip:
 
-    sudo pip install weka
+    sudo pip install QtWekaWrapper
+
+You can find the module on the [PyPi](https://pypi.org/project/QtWekaWrapper/).
 
 Usage
 -----
@@ -37,3 +39,4 @@ To run unittests across multiple Python versions, install:
 To run all [tests](http://tox.readthedocs.org/en/latest/):
 
     export TESTNAME=; tox
+

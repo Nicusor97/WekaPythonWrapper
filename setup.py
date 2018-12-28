@@ -39,10 +39,10 @@ setup(name='QtWekaWrapper',
     classifiers=[
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
-        "Operating System :: Linux",
+        "Operating System :: OS Independent",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Text Processing :: General",
     ],
-    platforms=['Linux'],
+    platforms=['OS Independent'],
     install_requires=get_reqs('dev_requirements.txt'),
 )
